@@ -1,0 +1,58 @@
+/* This sets the background and font for the whole page */
+body {
+  background-color: #fdfaf6; /* A soft, paper-like off-white */
+  font-family: "Georgia", serif; /* A classic book font */
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 40px auto; /* Centers the content */
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #e67e22; /* A nice accent line */
+  padding-bottom: 10px;
+}
+
+/* Remove the bullet points and padding from the list */
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Space out each book "row" */
+.book-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee; /* A light separator line */
+  display: flex;
+  justify-content: space-between; /* Puts Title/Author on left, Read button on right */
+  align-items: center;
+}
+
+.book-title {
+  font-weight: bold;
+  display: block; /* Puts author on a new line on small screens */
+}
+
+.author {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #666;
+  margin-left: 10px;
+}
+
+/* A simpler, cleaner "Read" link */
+a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #e67e22;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+a:hover {
+  background-color: #e67e22;
+  color: white;
+}
