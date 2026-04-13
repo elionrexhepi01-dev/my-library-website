@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="sq" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka Salafi_Kosove</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    // This tells Tailwind to use a class (like 'dark') to trigger dark mode
+    tailwind.config = {
+      darkMode: 'class',
+    }
+</script>
     <style>
         /* Adding a classic font for that library feel */
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
         .font-serif { font-family: 'Lora', serif; }
     </style>
 </head>
-<body class="bg-[#fdfaf6] font-serif text-gray-800 antialiased">
+<body class="bg-[#fdfaf6] dark:bg-slate-900 font-serif text-gray-800 dark:text-gray-200 transition-colors duration-300 antialiased">
+
+
+        <div class="fixed top-6 right-6 z-50">
+        <button id="mode-toggle" class="p-3 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full shadow-lg hover:scale-110 transition-transform">
+            <span class="block dark:hidden">🌙</span> <span class="hidden dark:block">☀️</span> </button>
+        </div>
 
     <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
         <header class="text-center mb-16">
-            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 border-b-2 border-orange-500 pb-4 inline-block mb-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white border-b-2 border-orange-500 pb-4 inline-block mb-6">
                 Biblioteka Salafi_Kosove
             </h1>
             <div class="max-w-2xl mx-auto">
-                <p class="text-lg text-gray-700 italic leading-relaxed">
+                <p class="text-lg text-gray-700 dark:text-gray-300 italic leading-relaxed">
                     Një koleksion veprash të përkthyera, falas për t’u lexuar.
                 </p>
-                <div class="mt-6 p-4 bg-orange-50 border-l-4 border-orange-400 text-sm text-gray-600 text-left rounded-r">
-                    <span class="font-bold text-orange-700">Njoftim:</span> 
+                <div class="mt-6 p-4 bg-orange-50 dark:bg-slate-800/50 border-l-4 border-orange-400 text-sm text-gray-600 dark:text-gray-400 text-left rounded-r">
+                    <span class="font-bold text-orange-700 dark:text-orange-400">Njoftim:</span> 
                     Këto libra janë përkthyer duke përdorur Inteligjencën Artificiale dhe mund të përmbajnë gabime. 
                     Nëse vëreni ndonjë gabim ose keni sugjerime, ju lutemi kontaktoni 
-                    <a href="https://instagram.com/salafi_kosove" target="_blank" class="text-orange-600 font-bold hover:underline">@salafi_kosove</a> në Instagram.
+                    <a href="https://instagram.com/salafi_kosove" target="_blank" class="text-orange-600 dark:text-orange-400 font-bold hover:underline">@salafi_kosove</a> në Instagram.
                 </div>
             </div>
         </header>
 
         <main>
-            <ul class="divide-y divide-gray-200">
+            <ul class="divide-y divide-gray-200 dark:divide-slate-800">
                 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             TRE PARIMET THEMELORE
                         </span> 
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Muhamed ibn Abdul-Uehab
                         </span>
                     </div>
@@ -50,12 +62,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             INKURAJIMI PËR TË MOS SHIKUAR DREJT ATYRE QË JANË MBI JU
                         </span> 
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Muhamed bin Hadi el-Medhkhali
                         </span>
                     </div>
@@ -65,12 +77,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             8 HAPA DREJT LUMTURISË
                         </span>
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Ebu Abdurrahman Nasir es-Sa‘di
                         </span>
                     </div>
@@ -80,12 +92,12 @@
                     </a>
                 </li>
                 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             METODOLOGJIA E SEKTIT TË SHPËTUAR
                         </span> 
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Muhamed bin Xhemil Zejnu
                         </span>
                     </div>
@@ -95,12 +107,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             SQARIMI I GABIMEVE TË ZAKONSHME TË PËRHAPURA GJERËSISHT MIDIS MUSLIMANËVE
                         </span> 
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Salih Al esh-Shejh
                         </span>
                     </div>
@@ -110,12 +122,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             15 CILËSITË E ROBËRVE TË MËSHIRUESIT
                         </span>
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Dr. Salih ibn Sa’d Es-Suhaimi
                         </span>
                     </div>
@@ -125,12 +137,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             ME TË VËRTETË, ME PËRMENDJEN E ALLAHUT QETËSOHEN ZEMRAT
                         </span>
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Abdur-Razzak Ibn Abdul-Muhsin el-Abbad el-Bedr
                         </span>
                     </div>
@@ -140,12 +152,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             VEHABI DHE VEHABIJE
                         </span>
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             N/A
                         </span>
                     </div>
@@ -155,12 +167,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             THESAR NGA THESARET E XHENETIT
                         </span>
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Abdur-Razzak Ibn Abdul-Muhsin el-Abbad el-Bedr
                         </span>
                     </div>
@@ -170,12 +182,12 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between py-8 group hover:bg-white/50 transition-colors px-2 rounded-lg">
+                <li class="flex items-center justify-between py-8 group hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded-lg">
                     <div class="flex-1 pr-4">
-                        <span class="block text-lg font-bold text-slate-800 leading-tight uppercase tracking-tight">
+                        <span class="block text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight uppercase tracking-tight">
                             KËSHILLAT E EBU ED-DERDASË
                         </span>
-                        <span class="block text-sm italic text-gray-500 mt-2">
+                        <span class="block text-sm italic text-gray-500 dark:text-gray-400 mt-2">
                             Shejh Salih ibn Abdulaziz Ali Shejh
                         </span>
                     </div>
@@ -188,10 +200,20 @@
             </ul>
         </main>
 
-        <footer class="mt-20 pt-8 border-t border-gray-200 text-center text-gray-400 text-sm">
+        <footer class="mt-20 pt-8 border-t border-gray-200 dark:border-slate-800 text-center text-gray-400 text-sm">
             &copy; 2026 Biblioteka Salafi_Kosove. Të gjitha të drejtat të rezervuara.
         </footer>
     </div>
+
+        <script>
+    // Set dark mode as default on first load
+    document.documentElement.classList.add('dark');
+
+    const btn = document.getElementById('mode-toggle');
+    btn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+    });
+        </script>
 
 </body>
 </html>
